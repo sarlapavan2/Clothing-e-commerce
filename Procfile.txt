@@ -1,1 +1,1 @@
-web : gunicorn authenticationProject.wsgi
+web : gunicorn ayeCaptian.wsgi
