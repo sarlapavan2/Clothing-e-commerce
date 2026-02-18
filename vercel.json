@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "ayeCaptian/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime" : "python 3.13.12"}
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "ayeCaptian/wsgi.py"
+        }
+    ]
+}
