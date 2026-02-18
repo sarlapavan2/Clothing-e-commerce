@@ -28,12 +28,14 @@ ol {
     padding: 0;
 }
 
+/* Top Bar */
+
 .topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 14px 80px;
-    background-color: #072044;
+    background-color: #f6b463;
 }
 
 .topbar-contact ul,
@@ -69,6 +71,7 @@ ol {
     border-radius: 4px;
     cursor: pointer;
 }
+
 
 .topbar-social .register-btn {
     background-color: #e16e2c;
@@ -506,7 +509,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px 40px;
     padding: 40px 80px;
-    background-color: #072044;
+    background-color: #f6b463;
 }
 
 
@@ -644,7 +647,7 @@ footer {
 
 /* copyright */
 .copyright {
-    background-color: #396bb3;
+    background-color: #fb6262;
     color: #ffffff;
     padding: 16px;
     text-align: center;
