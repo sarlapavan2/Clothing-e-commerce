@@ -7,10 +7,7 @@
                 width="100px"></a>
     </div>
 
-    <nav id="nav">
-        <span class="close-btn" id="close-btn">&times;</span>
-
-        <!-- SEARCH BAR START -->
+            <!-- SEARCH BAR START -->
         <form method="GET" action="{% url 'products:search_products' %}" class="search-form">
 
             <input type="text" name="q" placeholder="Search products...">
@@ -34,6 +31,11 @@
             </button>
 
         </form>
+
+    <nav id="nav">
+        <span class="close-btn" id="close-btn">&times;</span>
+
+
 
         <ul>
             <li><a href="{% url 'products:explore' %}">EXPLORE RANGE</a></li>

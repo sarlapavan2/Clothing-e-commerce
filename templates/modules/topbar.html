@@ -14,8 +14,9 @@
                 <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
             </ul>
-            <button class="login-btn"><a href="{% url 'accounts:login' %}">Login</a></button>
-            <button class="logout-btn"><a href="{% url 'accounts:logout' %}">Logout</a></button>
-            <button class="register-btn"><a href="{% url 'accounts:register' %}">Register</a></button>
+            <a href="{% url 'accounts:login' %}" class="login-btn">Login</a>
+            <a href="{% url 'accounts:logout' %}" class="logout-btn">Logout</a>
+            <a href="{% url 'accounts:register' %}" class="register-btn">Register</a>
+
         </div>
     </section>
