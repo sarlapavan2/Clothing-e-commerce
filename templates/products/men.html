@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Css/explore_range.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="category-section">
+
+    <!-- HOODIES -->
+    <section class="our-courses">
+        <h2 style="margin-bottom:20px;">Hoodies</h2>
+
+        <div class="all-courses">
+
+            {% for product in products %}
+            {% if product.product_type == 'HOODIE' %}
+            <div class="course-card">
+                <a href="{% url 'products:product_detail' product.slug %}">
+                    {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="course-img">
+                    {% else %}
+                    <img src="{% static 'Images/default.png' %}" alt="No image" class="course-img">
+                    {% endif %}
+                </a>
+
+                <div class="course-content">
+                    <a href="{% url 'products:product_detail' product.slug %}">
+                        <h4>{{ product.name }}</h4>
+                    </a>
+                    <p>₹{{ product.price }}</p>
+                </div>
+
+                <div class="course-btn">
+                    <a href="{% url 'products:product_detail' product.slug %}" class="see-btn">
+                        See More
+                    </a>
+                
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'add_to_cart' product.slug %}" class="cart-btn">
+                        Add to Cart
+                    </a>
+                    {% else %}
+                    <a href="{% url 'accounts:login' %}" class="cart-btn">
+                        Add to Cart
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            {% empty %}
+            <p>No Hoodies available.</p>
+            {% endfor %}
+
+        </div>
+    </section>
+
+
+
+    <!-- JACKETS -->
+    <section class="our-courses">
+        <h2 style="margin-bottom:20px;">JACKETS</h2>
+
+        <div class="all-courses">
+
+            {% for product in products %}
+            {% if product.product_type == 'JACKET' %}
+            <div class="course-card">
+                <a href="{% url 'products:product_detail' product.slug %}">
+                    {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="course-img">
+                    {% else %}
+                    <img src="{% static 'Images/default.png' %}" alt="No image" class="course-img">
+                    {% endif %}
+                </a>
+
+                <div class="course-content">
+                    <a href="{% url 'products:product_detail' product.slug %}">
+                        <h4>{{ product.name }}</h4>
+                    </a>
+                    <p>₹{{ product.price }}</p>
+                </div>
+
+                <div class="course-btn">
+                    <a href="{% url 'products:product_detail' product.slug %}" class="see-btn">
+                        See More
+                    </a>
+                
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'add_to_cart' product.slug %}" class="cart-btn">
+                        Add to Cart
+                    </a>
+                    {% else %}
+                    <a href="{% url 'accounts:login' %}" class="cart-btn">
+                        Add to Cart
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            {% empty %}
+            <p>No JACKETS available.</p>
+            {% endfor %}
+
+        </div>
+    </section>
+
+    <!-- SHIRTS -->
+    <section class="our-courses">
+        <h2 style="margin-bottom:20px;">SHIRTS</h2>
+
+        <div class="all-courses">
+
+            {% for product in products %}
+            {% if product.product_type == 'SHIRT' %}
+            <div class="course-card">
+                <a href="{% url 'products:product_detail' product.slug %}">
+                    {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="course-img">
+                    {% else %}
+                    <img src="{% static 'Images/default.png' %}" alt="No image" class="course-img">
+                    {% endif %}
+                </a>
+
+                <div class="course-content">
+                    <a href="{% url 'products:product_detail' product.slug %}">
+                        <h4>{{ product.name }}</h4>
+                    </a>
+                    <p>₹{{ product.price }}</p>
+                </div>
+
+                <div class="course-btn">
+                    <a href="{% url 'products:product_detail' product.slug %}" class="see-btn">
+                        See More
+                    </a>
+                
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'add_to_cart' product.slug %}" class="cart-btn">
+                        Add to Cart
+                    </a>
+                    {% else %}
+                    <a href="{% url 'accounts:login' %}" class="cart-btn">
+                        Add to Cart
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            {% empty %}
+            <p>No SHIRTS available.</p>
+            {% endfor %}
+
+        </div>
+    </section>
+
+
+    <!-- PANTS -->
+    <section class="our-courses">
+        <h2 style="margin-bottom:20px;">PANTS</h2>
+
+        <div class="all-courses">
+
+            {% for product in products %}
+            {% if product.product_type == 'PANT' %}
+            <div class="course-card">
+                <a href="{% url 'products:product_detail' product.slug %}">
+                    {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="course-img">
+                    {% else %}
+                    <img src="{% static 'Images/default.png' %}" alt="No image" class="course-img">
+                    {% endif %}
+                </a>
+
+                <div class="course-content">
+                    <a href="{% url 'products:product_detail' product.slug %}">
+                        <h4>{{ product.name }}</h4>
+                    </a>
+                    <p>₹{{ product.price }}</p>
+                </div>
+
+                <div class="course-btn">
+                    <a href="{% url 'products:product_detail' product.slug %}" class="see-btn">
+                        See More
+                    </a>
+                
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'add_to_cart' product.slug %}" class="cart-btn">
+                        Add to Cart
+                    </a>
+                    {% else %}
+                    <a href="{% url 'accounts:login' %}" class="cart-btn">
+                        Add to Cart
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            {% empty %}
+            <p>No PANTS available.</p>
+            {% endfor %}
+
+        </div>
+    </section>
+
+</section>
+
+{% endblock %}

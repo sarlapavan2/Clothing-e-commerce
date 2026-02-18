@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Css/search_results.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="search-container">
+
+    <h2 class="search-title">
+        Search Results
+    </h2>
+
+    {% if products %}
+
+    <div class="products-grid">
+
+        {% for product in products %}
+
+        <div class="product-card">
+
+            <a href="{% url 'products:product_detail' product.slug %}">
+                <div class="product-image">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                </div>
+
+                <div class="product-info">
+                    <h3>{{ product.name }}</h3>
+                    <p class="category">
+                        {{ product.get_gender_display }} | {{ product.get_product_type_display }}
+                    </p>
+                    <p class="price">₹ {{ product.price }}</p>
+                </div>
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+        <div class="no-results">
+            <h3>No products found 😢</h3>
+            <p>Try searching with different keywords.</p>
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

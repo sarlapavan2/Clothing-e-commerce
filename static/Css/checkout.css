@@ -1,0 +1,109 @@
+
+.container {
+    max-width: 1100px;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+/* Card Styling */
+.card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Order List */
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 15px;
+    color: #333;
+}
+
+.card ul li:last-child {
+    border-bottom: none;
+}
+
+/* Total Section */
+.total {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+    color: #111;
+}
+
+/* Form Styling */
+label {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+
+textarea,
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border-color: #111;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

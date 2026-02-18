@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Css/order_history.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="orders-container">
+
+        <h2>My Orders</h2>
+
+        {% if orders %}
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Total Amount</th>
+                    <th>View</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for order in orders %}
+                <tr>
+                    <td>#{{ order.id }}</td>
+                    <td>{{ order.created_at|date:"d M Y" }}</td>
+                    <td>₹ {{ order.total_amount }}</td>
+                    <td>
+                        <a href="{% url 'order_success' order.id %}" class="view-btn">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>You haven't placed any orders yet.</p>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

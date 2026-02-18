@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Css/order_success.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="card">
+
+        <h1>Order Success</h1>
+        <h2>Payment Successful 🎉</h2>
+
+        <p><strong>Order ID:</strong> {{ order.id }}</p>
+        <p><strong>Shipping Address:</strong> {{ order.shipping_address }}</p>
+        <p><strong>Phone:</strong> {{ order.phone_number }}</p>
+
+        <hr>
+
+        <h3>Ordered Items</h3>
+
+        <ul>
+            {% for item in order.items.all %}
+            <li>
+                <span>{{ item.product.name }}</span>
+                <span>₹ {{ item.price }} × {{ item.quantity }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div class="total">
+            Total Paid: ₹ {{ order.total_amount }}
+        </div>
+
+        <a href="{% url 'products:explore' %}" class="btn">Continue Shopping</a>
+    </div>
+
+{% endblock %}

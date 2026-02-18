@@ -1,0 +1,62 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>UI Workshop</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="{% static 'Icons/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'Icons/css/all.min.css' %}">
+    <!-- Custom CSS -->
+    
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'responsive.css' %}">
+
+    {% block extra_css %}
+        <!-- Extra Css -->
+    {% endblock %}
+</head>
+
+<body>
+	
+    <!-- Topbar -->
+    {% include 'modules/topbar.html' %}
+
+    <!-- Header -->
+	{% include 'modules/header.html' %}
+
+
+    {% block content %}
+        <!-- Content -->
+    {% endblock %}
+    
+
+    <!-- Footer -->
+    {% include 'modules/footer.html' %}
+
+
+   
+
+
+    <!-- Task - remove html extension.. -->
+    <!-- jQuery -->
+    <!-- Axios Link -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- FontAwesome Scripts -->
+    <script src="{% static 'Icons/js/all.js' %}"></script>
+    <script src="{% static 'Icons//js/all.min.js' %}"></script>
+    
+    <!-- Custom JS -->
+    <script src="{% static 'Js/script.js' %}"></script>
+
+
+</body>
+
+</html>

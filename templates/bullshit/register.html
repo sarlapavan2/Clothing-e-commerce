@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        .CustomPadding {
+            padding: 20px 150px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .custombutton {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<section>
+    <h1>Registration Page</h1>
+
+    <form method="post" class="CustomPadding">
+        {% csrf_token %}
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" name="name"
+                   value="{{ form.name.value|default:'' }}">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email"
+                   value="{{ form.email.value|default:'' }}">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="text" class="form-control" name="phone_number"
+                   value="{{ form.phone_number.value|default:'' }}">
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password1">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" name="password2">
+        </div>
+
+        <button type="submit" class="btn btn-primary custombutton">
+            Register
+        </button>
+    </form>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>

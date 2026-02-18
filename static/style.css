@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+body {
+    font-family: "Google Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 80px;
+    background-color: #072044;
+}
+
+.topbar-contact ul,
+.topbar-social,
+.topbar-social ul {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-contact ul a,
+.topbar-social a,
+.topbar-social ul a {
+    color: white;
+    padding-right: 16px;
+}
+
+.topbar-contact ul a:hover,
+.topbar-social a:hover,
+.topbar-social ul a:hover {
+    color: #2cabe1;
+}
+
+.topbar-social ul {
+    border-right: 1px solid white;
+}
+
+.topbar-social button {
+    background-color: #2cabe1;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    margin-left: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.topbar-social .register-btn {
+    background-color: #e16e2c;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    margin-left: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.topbar-social button:hover {
+    background-color: white;
+    color: #2cabe1;
+}
+
+/* Header CSS */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 80px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 20;
+}
+
+nav ul {
+    display: flex;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+nav ul li a:hover {
+    color: #2cabe1;
+}
+
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-toggle span{
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    display: block;
+    transition: 0.5s;
+}
+.close-btn{
+    display: none;
+}
+
+/*  SEARCH BAR */
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 30px;
+}
+
+.search-form input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 13px;
+    width: 160px;
+    transition: 0.3s;
+}
+
+.search-form input:focus {
+    border-color: #2cabe1;
+    box-shadow: 0 0 5px rgba(44,171,225,0.3);
+}
+
+.search-form select {
+    padding: 7px 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-form select:hover {
+    border-color: #2cabe1;
+}
+
+.search-form button {
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.search-form button:hover {
+    background-color: #2cabe1;
+}
+
+
+
+
+/* Hero Section */
+
+.hero {
+    background-image: url('Images/banner.jpg');
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+
+}
+
+.hero-content {
+    position: absolute;
+}
+
+.hero-content h1 {
+    color: #f1f1f1;
+    font-size: 40px;
+}
+
+.hero-content h1 span {
+    color: red;
+}
+
+.hero-content h2 {
+    color: rgb(27, 246, 31);
+}
+
+
+.hero-content p {
+    color: #f1f1f1;
+    width: 100%;
+    max-width: 500px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hero-btn-one {
+    background-color: #2cabe1;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    margin-right: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero-btn-one:hover,
+.hero-btn-two:hover {
+    background-color: white;
+    color: #2cabe1;
+}
+
+.hero-btn-two {
+    background-color: transparent;
+    color: white;
+    padding: 6px 14px;
+    border: 1px solid white;
+    margin-right: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* About US CSS */
+
+.about-us {
+    padding: 40px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 40px;
+}
+
+
+
+.about-us h4 {
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+
+
+.about-us p {
+    margin-bottom: 20px;
+}
+
+
+
+.about-us a {
+    background-color: #2cabe1;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+.about-us a:hover {
+    background-color: #072044;
+}
+
+/* Our Courses */
+
+.our-courses {
+    background-color: #f1f1f1;
+    padding: 40px 80px;
+}
+.our-courses h2 {
+    font-size: 24px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.course-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+.our-courses p {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 40px;
+}
+.all-courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 40px;
+}
+.course-card {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px 4px #d2d2d2;
+}
+.course-content h4 {
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.course-content p {
+    max-width: 100%;
+    text-align: left;
+    padding-bottom: 20px;
+}
+.course-btn {
+    border-top: 1px solid #d2d2d2;
+}
+.course-btn a {
+    background-color: #2cabe1;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+}
+.course-btn a:hover {
+    background-color: #072044;
+}
+
+/* Why Choose US - Counter Up CSS */
+
+.why-digit{
+    padding: 40px 80px;
+}
+.why-digit h2{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 24px;
+}
+
+.item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px 40px;
+}
+.item-card{
+    background-color:#2cabe1;
+    color: #ffffff;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.item-icon{
+    font-size: 28px;
+}
+
+
+
+/* Enroll Form CSS */
+
+.enroll-form {
+    background-color: #f1f1f1;
+    padding: 40px 0;
+}
+
+
+
+.enroll-form h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+.enroll-form p {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+
+
+
+.enroll-form .form-element {
+
+    background-color: white;
+
+    padding: 20px;
+
+    width: 100%;
+
+    max-width: 350px;
+
+    margin: auto;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 2px 2px #d2d2d2;
+
+}
+
+
+
+.form-element .form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.form-element .form-group label {
+
+    padding-bottom: 6px;
+
+    font-size: 14px;
+
+}
+
+
+
+.form-element .form-group label span {
+
+    color: red;
+
+}
+
+.form-element input,
+select {
+
+    padding: 6px 10px;
+
+}
+
+.form-element button {
+
+    background-color: #2cabe1;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form-element button:hover {
+    background-color: #072044;
+}
+
+.error-msg{
+    font-size: 12px;
+    color: red;
+}
+
+
+/* Footer  */
+/* Footer CSS */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px 40px;
+    padding: 40px 80px;
+    background-color: #072044;
+}
+
+
+
+.footer-contact ul li a {
+    color: white;
+    display: flex;
+    padding-top: 16px;
+}
+
+
+
+.footer-contact ul li a:hover {
+    color: #2cabe1
+}
+
+
+
+.footer-contact ul li a span {
+    padding-right: 10px;
+}
+
+
+
+.footer-contact h4 {
+    color: #2cabe1;
+    padding-top: 16px;
+}
+
+
+
+.useful-links h4 {
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
+.useful-links ul li {
+    padding-top: 16px;
+}
+
+
+
+.useful-links ul li a {
+    color: #f1f1f1;
+}
+
+
+
+.useful-links ul li a:hover {
+    color: #2cabe1;
+    padding-left: 10px;
+}
+
+
+
+.useful-links ul li a span {
+    padding-right: 6px;
+}
+
+
+
+.subscribe h4 {
+    color: white;
+}
+
+
+
+.subscribe p {
+    color: #f1f1f1;
+    padding: 16px 0;
+}
+
+
+
+.subscribe form {
+    background-color: white;
+    justify-content: space-between;
+    padding: 4px 10px;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+
+
+.subscribe form input {
+    border: none;
+}
+
+
+
+.subscribe form button {
+    background-color: #2cabe1;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+.subscribe ul {
+    display: flex;
+    margin-top: 16px;
+}
+
+
+
+.subscribe ul li {
+    background-color: #396bb3;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.subscribe ul li a {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+
+
+
+.subscribe ul li a:hover {
+    color: #072044;
+}
+
+/* copyright */
+.copyright {
+    background-color: #396bb3;
+    color: #ffffff;
+    padding: 16px;
+    text-align: center;
+}
+
+/* WhatsApp Floating Icon */
+.whatsapp-icon {
+    background-color: #25d366;
+    position: fixed;
+    bottom: 18%;
+    right: 0%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.whatsapp-icon a {
+    color: #f1f1f1;
+}
+
+.whatsapp-icon a:hover {
+    color: black;
+}
+
+.active {
+    color: #2cabe1;
+}

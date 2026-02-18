@@ -1,0 +1,55 @@
+{% load static%}
+
+<!-- Header -->
+<header>
+    <div class="brand-logo">
+        <a href="{% url 'accounts:home' %}"><img src="{% static 'Images/lookism_logo.png' %}" alt="Lookism Logo"
+                width="100px"></a>
+    </div>
+
+    <nav id="nav">
+        <span class="close-btn" id="close-btn">&times;</span>
+
+        <!-- SEARCH BAR START -->
+        <form method="GET" action="{% url 'products:search_products' %}" class="search-form">
+
+            <input type="text" name="q" placeholder="Search products...">
+
+            <select name="gender">
+                <option value="">All</option>
+                <option value="M">Men</option>
+                <option value="F">Women</option>
+            </select>
+
+            <select name="category">
+                <option value="">All Type</option>
+                <option value="HOODIE">Hoodie</option>
+                <option value="JACKET">Jacket</option>
+                <option value="SHIRT">Shirt</option>
+                <option value="PANT">Pant</option>
+            </select>
+
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </form>
+
+        <ul>
+            <li><a href="{% url 'products:explore' %}">EXPLORE RANGE</a></li>
+            <li><a href="{% url 'products:men' %}">MEN</a></li>
+            <li><a href="{% url 'products:women' %}">WOMEN</a></li>
+            <li><a href="{% url 'view_cart' %}">CART</a></li>
+            <li><a href="{% url 'order_history' %}">ORDERS</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+</header>

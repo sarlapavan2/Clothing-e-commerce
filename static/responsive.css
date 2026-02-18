@@ -1,0 +1,125 @@
+/* Mobile Screen CSS */
+
+@media screen and (max-width: 767px) {
+
+    /* Top Bar Css */
+    .topbar{
+        padding: 14px 20px;
+        flex-direction: column;
+    }
+    .topbar-social{
+        padding-top: 10px;
+    }
+
+    /* Header CSS */
+    header{
+        padding: 14px 20px;
+        
+    }
+
+    nav{
+        position: fixed;
+        top: 0;
+        left: -250px;
+        background-color: whitesmoke;
+        width: 250px;
+        height: 100%;
+        padding-top: 60px;
+        z-index: 100px;
+        transition: left 1s ease-in-out;
+    }
+
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li{
+        width: 100%;
+    }
+    nav ul li a{
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        display: block;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    nav.active{
+        left: 0px;
+    }
+
+    .close-btn{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-size: 40px;
+    }
+
+    .overlay{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: black;
+        opacity: 0.8;
+    }
+
+    .overlay.active{
+        display: block;
+    }
+
+
+
+    /* Hero Section */
+    .hero-content h1{
+        font-size: 35px;
+    }
+
+    /* About US */
+    .about-us{
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    /* Our Courses */
+    .our-courses{
+        padding: 20px;
+    }
+    .all-courses{
+        grid-template-columns: 1fr;
+    }
+
+    /* Why Choose US */
+    .why-digit{
+        padding: 20px;
+    }
+    .item{
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    footer{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .whatsapp-icon{
+        display: none;
+    }
+}
+
+@media screen and (min-width : 768px) and (max-width : 1023px){
+    
+    .topbar, header, .about-us, .our-courses, .why-digit,.footer{
+        padding: 14px 20px;
+    }
+
+    .all-courses, .item, footer{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+}

@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div id="overlay" class="overlay"></div>
+
+<!-- Hero Section -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to <span>LOOKISM</span></h1>
+        <h2>You Are Built Different</h2>
+        <p>Fashion for those who don't follow the crowd.
+            Bold fits. Sharp attitude. Designed to make you stand out, every single time..</p>
+        <a href="" class="hero-btn-one">Explore</a>
+        <a href="" class="hero-btn-two">Shop</a>
+    </div>
+</section>
+
+<!-- About Us -->
+<section class="about-us">
+
+    <div class="about-content">
+    
+        <h4>About Lookism Store</h4>
+        <p>Lookism is a modern clothing brand created for individuals who believe style is a form of self-expression, not
+            conformity.
+            We design fashion for people who stand out naturally — bold minds, confident personalities, and fearless
+            identities.
+        </p>
+        <p>
+            Every piece at Lookism is crafted with a purpose: to empower you to express who you truly are. Our collections
+            blend contemporary street style with premium comfort, ensuring you don't just wear clothes — you make a
+            statement.
+        </p>
+        <p>We believe that confidence starts with how you feel in what you wear. That's why Lookism is for those who are
+            unapologetically themselves.
+            You are built different — and your style should prove it.</p>
+        <a href="">Know More</a>
+    </div>
+
+    <div class="about-img">
+
+        <img src="{% static 'Images/image1.jpg' %}" alt="About DIGIT" width="100%" height="400px" />
+
+    </div>
+</section>
+
+
+<!-- Course Section -->
+<section class="our-courses">
+
+    <h2>Our Collection</h2>
+
+    <p>Discover thoughtfully designed clothing crafted for comfort, confidence, and bold self-expression. Every piece is made to help you stand out — effortlessly.</p>
+
+    <div class="all-courses">
+
+        <!-- Card One -->
+
+        <div class="course-card">
+            <img src="{% static 'Images/exp-pic1.jpg' %}" alt="" class="course-img" />
+
+            <div class="course-content">
+                <h4>Classic Cotton Hoodie</h4>
+                <p>A long-sleeve hoodie made for those who are built different.</p>
+            </div>
+
+            <div class="course-btn">
+                <a href="courses.html">See More</a>
+            </div>
+
+        </div>
+
+
+
+        <!-- Card Two -->
+
+        <div class="course-card">
+            <img src="{% static 'Images/exp-pic2.jpg' %}" alt="" class="course-img" />
+
+            <div class="course-content">
+                <h4>Oversized Hoodie</h4>
+                <p>Premium long-sleeve hoodie designed for comfort, confidence, and everyday edge.</p>
+            </div>
+
+            <div class="course-btn">
+                <a href="courses.html">See More</a>
+            </div>
+
+        </div>
+
+        <!-- Card Three -->
+
+        <div class="course-card">
+            <img src="{% static 'Images/exp-pic3.jpg' %}" alt="" class="course-img" />
+
+            <div class="course-content">
+                <h4>Vintage Graphic Tee</h4>
+                <p>A versatile long-sleeve hoodie built for all-day comfort and timeless style.</p>
+            </div>
+            <div class="course-btn">
+                <a href="courses.html">See More</a>
+            </div>
+
+        </div>
+
+
+
+        <!-- Card Four -->
+
+        <div class="course-card">
+            <img src="{% static 'Images/exp-pic4.jpg' %}" alt="" class="course-img" />
+
+            <div class="course-content">
+                <h4>Printed Graphic Tee's</h4>
+                <p>Soft, breathable long-sleeve hoodie perfect for daily wear in any season.</p>
+            </div>
+
+            <div class="course-btn">
+                <a href="courses.html">See More</a>
+            </div>
+
+        </div>
+
+
+
+        <!-- Card Five -->
+
+        <div class="course-card">
+            <img src="{% static 'Images/exp-pic5.jpg' %}" alt="" class="course-img" />
+
+            <div class="course-content">
+                <h4>Classic Printed Hoodie</h4>
+                <p>A long-sleeve hoodie designed for bold comfort and effortless street style.</p>
+            </div>
+
+            <div class="course-btn">
+                <a href="courses.html">See More</a>
+            </div>
+
+        </div>
+
+
+
+        <!-- Card Six -->
+
+        <div class="course-card">
+            <img src="{% static 'Images/exp-pic6.jpg' %}" alt="" class="course-img" />
+
+            <div class="course-content">
+                <h4>Long Sleeved Hoodie</h4>
+                <p>Premium long-sleeve hoodie designed for comfort, confidence, and everyday edge.</p>
+            </div>
+
+            <div class="course-btn">
+                <a href="courses.html">See More</a>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Why Should Choose Us -->
+
+<section class="why-digit">
+
+    <h2>Why Visit Us</h2>
+    <div class="item">
+
+        <!-- Counter Card One -->
+
+        <div class="item-card">
+            <div class="item-icon">
+                <i class="fa-solid fa-shirt"></i>
+            </div>
+
+            <h1 class="count" data-number="50"></h1>
+            <h4>Products</h4>
+        </div>
+
+        <!-- Counter Card Two -->
+
+        <div class="item-card">
+            <div class="item-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <h1 class="count" data-number="30"></h1>
+            <h4>Location</h4>
+        </div>
+
+        <!-- Counter Card Three -->
+
+        <div class="item-card">
+            <div class="item-icon">
+                <i class="fa-solid fa-box"></i>
+            </div>
+
+            <h1 class="count" data-number="200"></h1>
+            <h4>Bold Designs</h4>
+        </div>
+
+        <!-- Counter Card Four -->
+
+        <div class="item-card">
+            <div class="item-icon">
+                <i class="fa-regular fa-face-laugh"></i>
+            </div>
+
+            <h1 class="count" data-number="2000"></h1>
+            <h4>Happy Customers</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Enroll Form -->
+
+<section class="enroll-form">
+
+    <h2>Subscribe To Us</h2>
+    <p>Get Offers and Discounts along with the latest Collection Updates</p>
+
+    <form class="form-element" action="" method="post" onsubmit="return validationForm()">
+
+        <div class="form-group">
+            <label>Name<span>*</span></label>
+            <input id="name" type="name" name="fname" placeholder="Enter Your Name*" value="" />
+            <span id="name-error" class="error-msg"></span>
+        </div>
+
+        <div class="form-group">
+
+            <label>Email Address<span>*</span></label>
+            <input id="email" type="email" name="email" placeholder="Enter Your Email*" value="" />
+            <span id="email-error" class="error-msg"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number<span>*</span></label>
+            <input id="phone" type="tel" name="phone" placeholder="Enter Your Phone Number*" value="" />
+            <span id="phone-error" class="error-msg"></span>
+        </div>
+
+        <button type="submit" value="enrollsubmit">Submit</button>
+    </form>
+</section>
+
+{% endblock %}

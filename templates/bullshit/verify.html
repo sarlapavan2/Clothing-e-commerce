@@ -1,0 +1,63 @@
+git status
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verify_otp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        .CustomPadding {
+            padding: 20px 150px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .custombutton {
+            display: block;
+            margin: auto;
+            padding: 10px 30px;
+        }
+        .custombutton a{
+            color: white;
+            text-decoration: none;
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>Verify opt Page</h1>
+        <form method="post" class="CustomPadding">
+            {% csrf_token %}
+            <div class="mb-3">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="otp">
+                <div id="emailHelp" class="form-text">We'll never share your OTP with anyone else.</div>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="btn btn-primary custombutton">verify</button>
+                <button type="submit" class="btn btn-primary custombutton"><a href="{% url 'accounts:resend_otp' %}">Resend OTP</a></button>
+            </div>
+        </form>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

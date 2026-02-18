@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Css/payment.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="payment-wrapper">
+
+    <div class="payment-card">
+
+        <h2>Choose Payment Method</h2>
+
+        <div class="amount-box">
+            <span>Total Amount</span>
+            <strong>₹ {{ cart.total_price }}</strong>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="payment-options">
+
+                <label class="payment-option">
+                    <input type="radio" name="payment_method" value="ONLINE" required>
+                    <div class="option-content">
+                        <span class="title">Online Payment</span>
+                        <span class="desc">UPI / Card / Net Banking</span>
+                    </div>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment_method" value="COD">
+                    <div class="option-content">
+                        <span class="title">Cash on Delivery</span>
+                        <span class="desc">Pay when product arrives</span>
+                    </div>
+                </label>
+
+            </div>
+
+            <button type="submit" class="pay-btn">
+                Continue & Pay
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

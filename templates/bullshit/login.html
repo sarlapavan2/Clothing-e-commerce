@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar bg-body-tertiary customNav">
+        <div class="container-fluid d-flex justify-content-between">
+            <!-- Left side -->
+            <a class="navbar-brand" href="#">__Lookism__</a>
+
+            <!-- Right side -->
+            <form class="d-flex" role="search">
+                <button class="btn btn-outline-success" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+
+                <div class="card shadow p-4">
+                    <h3 class="text-center mb-4">Login</h3>
+
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-danger">{{ message }}</div>
+                        {% endfor %}
+                        {% endif %}
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email"
+                                required>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control"
+                                placeholder="Enter your password" required>
+                        </div>
+
+                        <!-- Forgot password -->
+                        <div class="text-center mt-3 mb-3">
+                            <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                        </div>
+
+
+                        <!-- Login Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                Login
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!-- TopBar -->
+    <section class="topbar">
+        <div class="topbar-contact">
+            <ul>
+                <li><a href="https://wa.link/2dy05b" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="tel:7036500024"><span><i class="fa-solid fa-mobile-button"></i></span> +91-7036500024</a>
+                </li>
+                <li><a href="mailto:test@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="topbar-social">
+            <ul>
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+            <button class="login-btn"><a href="{% url 'accounts:login' %}">Login</a></button>
+            <button class="logout-btn"><a href="{% url 'accounts:logout' %}">Logout</a></button>
+            <button class="register-btn"><a href="{% url 'accounts:register' %}">Register</a></button>
+        </div>
+    </section>

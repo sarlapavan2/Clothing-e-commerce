@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Css/checkout.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+    
+        <div class="card">
+            <h2>Order Summary</h2>
+    
+            <ul>
+                {% for item in cart.items.all %}
+                <li>
+                    <span>{{ item.product.name }}</span>
+                    <span>₹ {{ item.product.price }} × {{ item.quantity }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+    
+            <div class="total">
+                Total: ₹ {{ cart.total_price }}
+            </div>
+        </div>
+    
+        <div class="card">
+            <h2>Shipping Details</h2>
+    
+            <form method="POST">
+                {% csrf_token %}
+    
+                <label>Shipping Address</label>
+                <textarea name="address" required></textarea>
+    
+                <label>Phone Number</label>
+                <input type="text" name="phone" required>
+    
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </div>
+    
+    </div>
+
+{% endblock %}
