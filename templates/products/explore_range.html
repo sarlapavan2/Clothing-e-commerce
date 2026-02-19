@@ -15,7 +15,7 @@
             <div class="course-card">
                 <a href="{% url 'products:product_detail' product.slug %}">
                     {% if product.image %}
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="course-img">
+                        <img src="{% static product.image %}" alt="{{ product.name }}" class="course-img">
                     {% else %}
                         <img src="{% static 'Images/default.png' %}" alt="No image" class="course-img">
                     {% endif %}
@@ -59,7 +59,7 @@
             <div class="course-card">
                 <a href="{% url 'products:product_detail' product.slug %}">
                     {% if product.image %}
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="course-img">
+                        <img src="{% static product.image %}" alt="{{ product.name }}" class="course-img">
                     {% else %}
                         <img src="{% static 'Images/default.png' %}" alt="No image" class="course-img">
                     {% endif %}
@@ -104,7 +104,7 @@
             <div class="course-card">
                 <a href="{% url 'products:product_detail' product.slug %}">
                     {% if product.image %}
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="course-img">
+                        <img src="{% static product.image %}" alt="{{ product.name }}" class="course-img">
                     {% else %}
                         <img src="{% static 'Images/default.png' %}" alt="No image" class="course-img">
                     {% endif %}
@@ -148,7 +148,7 @@
             <div class="course-card">
                 <a href="{% url 'products:product_detail' product.slug %}">
                     {% if product.image %}
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="course-img">
+                        <img src="{% static product.image %}" alt="{{ product.name }}" class="course-img">
                     {% else %}
                         <img src="{% static 'Images/default.png' %}" alt="No image" class="course-img">
                     {% endif %}
@@ -166,11 +166,7 @@
                         See More
                     </a>
                 </div>
-                <div class="course-btn">
-                    <a href="{% url 'products:product_detail' product.slug %}" class="see-btn">
-                        See More
-                    </a>
-                
+                <div class="course-btn">                
                     {% if user.is_authenticated %}
                     <a href="{% url 'add_to_cart' product.slug %}" class="cart-btn">
                         Add to Cart

@@ -147,6 +147,6 @@ EMAIL_HOST_USER = 'sarlapavan2@gmail.com'          # your email here
 EMAIL_HOST_PASSWORD = 'iyow zmyr aqyq zley'         # app password or your email password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR /'media'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR /'media'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
