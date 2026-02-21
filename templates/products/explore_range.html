@@ -98,9 +98,9 @@
 
     <!-- SHIRTS -->
     <section class="our-courses">
-        <h2 style="margin-bottom:20px;">Shirts</h2>
+        <h2 style="margin-bottom:20px;">Hoodies</h2>
         <div class="all-courses">
-            {% for product in shirts %}
+            {% for product in hoodies %}
             <div class="course-card">
                 <a href="{% url 'products:product_detail' product.slug %}">
                     {% if product.image %}
@@ -134,17 +134,17 @@
                 </div>
             </div>
             {% empty %}
-            <p>No Shirts available.</p>
+            <p>No Hoodies available.</p>
             {% endfor %}
         </div>
     </section>
 
 
     <!-- PANTS -->
-    <section class="our-courses">
-        <h2 style="margin-bottom:20px;">Pants</h2>
+<section class="our-courses">
+        <h2 style="margin-bottom:20px;">Hoodies</h2>
         <div class="all-courses">
-            {% for product in pants %}
+            {% for product in hoodies %}
             <div class="course-card">
                 <a href="{% url 'products:product_detail' product.slug %}">
                     {% if product.image %}
@@ -162,11 +162,10 @@
                 </div>
 
                 <div class="course-btn">
-                    <a href="{% url 'products:product_detail' product.slug %}">
+                    <a href="{% url 'products:product_detail' product.slug %}" class="see-btn">
                         See More
                     </a>
-                </div>
-                <div class="course-btn">                
+                
                     {% if user.is_authenticated %}
                     <a href="{% url 'add_to_cart' product.slug %}" class="cart-btn">
                         Add to Cart
@@ -179,7 +178,7 @@
                 </div>
             </div>
             {% empty %}
-            <p>No Pants available.</p>
+            <p>No Hoodies available.</p>
             {% endfor %}
         </div>
     </section>
